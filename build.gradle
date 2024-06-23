@@ -12,6 +12,7 @@ buildscript {
     classpath(libs.plugin.licensee)
     classpath(libs.plugin.metalava)
     classpath(libs.plugin.publish)
+    classpath(libs.plugin.compose)
   }
 }
 

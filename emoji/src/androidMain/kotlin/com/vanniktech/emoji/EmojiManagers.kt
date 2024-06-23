@@ -22,6 +22,7 @@ import android.content.Context
 import android.text.Spannable
 import android.text.SpannableStringBuilder
 import com.vanniktech.emoji.internal.EmojiSpan
+import com.vanniktech.emoji.internal.emojiDrawableProvider
 
 fun EmojiManager.replaceWithImages(
   context: Context,
@@ -36,6 +37,13 @@ fun EmojiManager.replaceWithImages(
     fallback = defaultEmojiReplacer,
   )
 }
+
+fun EmojiManager.getEmojiDrawable(
+  emoji: Emoji,
+  context: Context,
+) = emojiDrawableProvider().getDrawable(emoji = emoji, context = context)
+
+fun EmojiManager.isPlatformEmojiProvider() = emojiProvider() is EmojiReplacer
 
 internal val defaultEmojiReplacer = EmojiReplacer { context, text, emojiSize, _ ->
   val existingSpans = text.getSpans(0, text.length, EmojiSpan::class.java)

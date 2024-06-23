@@ -102,6 +102,8 @@ package com.vanniktech.emoji {
   }
 
   public final class EmojiManagers {
+    method public static android.graphics.drawable.Drawable getEmojiDrawable(com.vanniktech.emoji.EmojiManager, com.vanniktech.emoji.Emoji emoji, android.content.Context context);
+    method public static boolean isPlatformEmojiProvider(com.vanniktech.emoji.EmojiManager);
     method public static void replaceWithImages(com.vanniktech.emoji.EmojiManager, android.content.Context context, android.text.Spannable? text, float emojiSize);
   }
 
