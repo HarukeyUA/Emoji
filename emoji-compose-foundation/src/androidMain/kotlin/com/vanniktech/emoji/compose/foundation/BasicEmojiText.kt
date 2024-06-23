@@ -29,7 +29,7 @@ import com.vanniktech.emoji.getEmojiDrawable
 import com.vanniktech.emoji.isPlatformEmojiProvider
 
 @Composable
-fun EmojiText(
+fun BasicEmojiText(
   text: String,
   modifier: Modifier = Modifier,
   style: TextStyle = TextStyle.Default,
@@ -41,7 +41,7 @@ fun EmojiText(
   inlineContent: Map<String, InlineTextContent> = mapOf(),
   color: ColorProducer? = null,
 ) {
-  EmojiText(
+  BasicEmojiText(
     text = AnnotatedString(text),
     modifier = modifier,
     style = style,
@@ -56,7 +56,7 @@ fun EmojiText(
 }
 
 @Composable
-fun EmojiText(
+fun BasicEmojiText(
   text: AnnotatedString,
   modifier: Modifier = Modifier,
   style: TextStyle = TextStyle.Default,
