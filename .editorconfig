@@ -14,3 +14,4 @@ ktlint_standard_backing-property-naming=disabled
 ktlint_standard_kdoc=disabled
 ktlint_standard_condition-wrapping=disabled
 ktlint_experimental=enabled
+ktlint_function_naming_ignore_when_annotated_with = Composable
