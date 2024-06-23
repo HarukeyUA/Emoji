@@ -160,6 +160,9 @@ class MainActivity : AppCompatActivity() {
       emojiPopup.dismiss()
       MainDialog.show(this)
     }
+    binding.compose.setOnClickListener {
+      startActivity(Intent(this, ComposeActivity::class.java))
+    }
     binding.button.text = "Switch between Emoji Provider \uD83D\uDE18\uD83D\uDE02\uD83E\uDD8C"
     binding.button.setOnClickListener {
       val menu = PopupMenu(this, binding.button, Gravity.BOTTOM)

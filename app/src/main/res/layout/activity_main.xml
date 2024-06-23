@@ -48,6 +48,14 @@
       android:text="Emojis without keyboard ⌨️️"
       tools:ignore="HardcodedText"
       />
+  <Button
+      android:id="@+id/compose"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="16dp"
+      android:text="Jetpack Compose"
+      tools:ignore="HardcodedText"
+      />
   <com.vanniktech.emoji.EmojiCheckbox
       android:id="@+id/disableKeyboardInput"
       android:layout_width="wrap_content"

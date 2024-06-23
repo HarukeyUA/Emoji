@@ -25,5 +25,6 @@
         android:name="com.vanniktech.emoji.sample.CustomViewActivity"
         android:windowSoftInputMode="stateVisible|adjustResize" />
     <activity android:name="com.vanniktech.emoji.sample.EmojisActivity" />
+    <activity android:name="com.vanniktech.emoji.sample.ComposeActivity" />
   </application>
 </manifest>

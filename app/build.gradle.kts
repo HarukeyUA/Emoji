@@ -1,6 +1,7 @@
 plugins {
   id("com.android.application")
   id("org.jetbrains.kotlin.android")
+  id("org.jetbrains.kotlin.plugin.compose")
 }
 
 kotlin {
@@ -61,6 +62,9 @@ android {
 
 dependencies {
   implementation(project(":emoji-androidx-emoji2"))
+  implementation(project(":emoji-compose-foundation"))
+  implementation(project(":emoji-compose-material"))
+  implementation(project(":emoji-compose-material3"))
   implementation(project(":emoji-facebook"))
   implementation(project(":emoji-google"))
   implementation(project(":emoji-google-compat"))
@@ -68,10 +72,17 @@ dependencies {
   implementation(project(":emoji-material"))
   implementation(project(":emoji-twitter"))
   implementation(libs.timber)
+  implementation(project.dependencies.platform(libs.compose.bom))
+  implementation(libs.compose.ui)
+  implementation(libs.compose.ui.graphics)
+  implementation(libs.compose.foundation)
+  implementation(libs.compose.material)
+  implementation(libs.compose.material3)
 }
 
 dependencies {
   debugImplementation(libs.leakcanary.android)
+  debugImplementation(libs.compose.ui.test.manifest)
 }
 
 dependencies {
